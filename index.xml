@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Maddy&#39;s super awesome cool blog!</title>
+    <title>Maddy&#39;s blog!</title>
     <link>http://example.org/</link>
-    <description>Recent content on Maddy&#39;s super awesome cool blog!</description>
+    <description>Recent content on Maddy&#39;s blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 29 May 2019 06:42:00 -0400</lastBuildDate>
@@ -12,13 +12,12 @@
     
     
     <item>
-      <title>My First Post</title>
-      <link>http://example.org/posts/my-first-post/</link>
+      <title>Coding a simple poker game on python</title>
+      <link>http://example.org/posts/pokergame/</link>
       <pubDate>Wed, 29 May 2019 06:42:00 -0400</pubDate>
       
-      <guid>http://example.org/posts/my-first-post/</guid>
-      <description>Hello! My name is Maddy :)
-Woop woop!!!</description>
+      <guid>http://example.org/posts/pokergame/</guid>
+      <description>In this game of poker, the rules are simple: the user will input the number of players into the code as an argument. The script will as the names of every player, then deal 5 cards each. In this version of the game, we just compare the hands, and the hand with the highest card wins. In the case of a tie where multiple players have the same highest card, it script will revert to each player&amp;rsquo;s second highest card to compare.</description>
     </item>
     
   </channel>

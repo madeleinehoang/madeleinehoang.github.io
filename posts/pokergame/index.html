@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Maddy&#39;s blog!  | Coding a simple poker game on python</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.55.6" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Coding a simple poker game on python" />
+<meta property="og:description" content="In this game of poker, the rules are simple: the user will input the number of players into the code as an argument. The script will as the names of every player, then deal 5 cards each. In this version of the game, we just compare the hands, and the hand with the highest card wins. In the case of a tie where multiple players have the same highest card, it script will revert to each player&rsquo;s second highest card to compare." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/pokergame/" />
+<meta property="article:published_time" content="2019-05-29T06:42:00-04:00"/>
+<meta property="article:modified_time" content="2019-05-29T06:42:00-04:00"/>
+
+<meta itemprop="name" content="Coding a simple poker game on python">
+<meta itemprop="description" content="In this game of poker, the rules are simple: the user will input the number of players into the code as an argument. The script will as the names of every player, then deal 5 cards each. In this version of the game, we just compare the hands, and the hand with the highest card wins. In the case of a tie where multiple players have the same highest card, it script will revert to each player&rsquo;s second highest card to compare.">
+
+
+<meta itemprop="datePublished" content="2019-05-29T06:42:00-04:00" />
+<meta itemprop="dateModified" content="2019-05-29T06:42:00-04:00" />
+<meta itemprop="wordCount" content="1009">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Coding a simple poker game on python"/>
+<meta name="twitter:description" content="In this game of poker, the rules are simple: the user will input the number of players into the code as an argument. The script will as the names of every player, then deal 5 cards each. In this version of the game, we just compare the hands, and the hand with the highest card wins. In the case of a tie where multiple players have the same highest card, it script will revert to each player&rsquo;s second highest card to compare."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Maddy&#39;s blog!
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Coding a simple poker game on python</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-05-29T06:42:00-04:00">May 29, 2019</time>      
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>In this game of poker, the rules are simple: the user will input the number of players into the code as an argument. The script will as the names of every player, then deal 5 cards each. In this version of the game, we just compare the hands, and the hand with the highest card wins. In the case of a tie where multiple players have the same highest card, it script will revert to each player&rsquo;s second highest card to compare. For example, if player 1 has the hand 2, 3, K, Q, 7, and player 2 has the hand J, J, K, 7, 3, then player 1 would win because K, Q beats K, J.</p>
+
+<p>So, to start, we will be using the random module, so import random is required. In this game, the function would accept one argument &ndash; the number_of_players. Then, the first line of the program would ask for each players&rsquo; name. Since this has to be asked the same number of times as how many players there are, a for loop is involved. I made these names form a list so later it would be easier to access each name by indexing the list. The first line would be: names = [ input( &ldquo;Please enter your name: &ldquo; for i in range( number_of_players ) ) ].</p>
+
+<p>Next, we would have to set up the game. This involves giving the options for cards to be dealt to each player. I made a list of each available card: cards = [ &ldquo;A&rdquo;, &ldquo;K&rdquo;, &ldquo;Q&rdquo;, &ldquo;J&rdquo;, &ldquo;10&rdquo;, &ldquo;9&rdquo;, &ldquo;8&rdquo;, &ldquo;7&rdquo;, &ldquo;6&rdquo;, &ldquo;5&rdquo;, &ldquo;4&rdquo;, &ldquo;3&rdquo;, &ldquo;2&rdquo; ] * 4. The list was multiplied by 4 because there are four different suits, so each number could be drawn out 4 times. To be able to compare these values later to determine the winner, a dictionary of values would also have to be made so the cards drawn out would be able to be compared against one another to see which one is higher: values = {&ldquo;2&rdquo;: 2, &ldquo;3&rdquo;: 3, &ldquo;4&rdquo;: 4, &ldquo;5&rdquo;: 5, &ldquo;6&rdquo;: 6, &ldquo;7&rdquo;: 7, &ldquo;8&rdquo;: 8, &ldquo;9&rdquo;: 9, &ldquo;10&rdquo;: 10, &ldquo;J&rdquo;: 11,&ldquo;Q&rdquo;: 12,&ldquo;K&rdquo;: 13,&ldquo;A&rdquo;: 14}. The final steps of setting up would be to make empty dictionaries of the hand and ordered hand: hand = {}; ordered_hand = {}. The hand represents the cards dealt to each player, and the ordered_hand represents the cards dealt to each player converted to their values and in a descending order.</p>
+
+<p>Now that the game is set, we can start dealing the cards. Each player will receive 5 cards. Since the game can be used with any number of players, a for loop is required and it will have to use what the user inputted: for name in names:. The aim is to have the keys in the hand and ordered_hand dictionary be the players&rsquo; names, and the values to be a list of their cards. So, the list for the cards for each player will have to be initialized: hand[ name ] = []; ordered_hand = []. Now for dealing cards. Since each player is dealt 5 cards, a for loop can be created under the previous for loop: for i in range( 0, 5 ):. The cards dealt should be random from the list of cards: choice = random.choice( cards ). This value will then need to be appended to the list of cards chosen for that particular player: hand[ name ] += [ choice ]. If we print( hand ) at this point, it should output a dictionary of the players and cards, eg. { &lsquo;a&rsquo;: [ &lsquo;4&rsquo;, &lsquo;6&rsquo;, &lsquo;2&rsquo;, &lsquo;J&rsquo;, &lsquo;A&rsquo; ], &lsquo;b&rsquo;: [ &lsquo;9&rsquo;, &lsquo;Q&rsquo;, &lsquo;6&rsquo;, &lsquo;2&rsquo;, &lsquo;K&rsquo; ] }. To make this easy to compare, we should convert these strings into numerical values using the values dictionary. So, under the same for loop because we want to convert each one of the cards: value = values.get( choice ). We then append this value to the ordered_hand dictionary, similar to how the original card choice was appended to the hand dictionary: ordered_hand += [ value ]. We then want to remove this card from the list of cards available to choose from so the script does not dealt more than four of each card number. We now have a dictionary of the cards for each player converted into their values, eg. { &lsquo;a&rsquo;: [ 4, 6, 2, 11, 14 ], &lsquo;b&rsquo;: [ 9, 12, 6, 2, 13 ] }. We can now get out of this for loop, but make sure to still stay in the first one. We want to print out each players&rsquo; hand, so we can format a code within the for loop of the players: print( &ldquo;{}&rsquo;s hand is {}, {}, {}, {}, {}.&rdquo;.format( name, hand[ name ][ 0 ], hand[ name ][ 1 ], hand[ name ][ 2 ], hand[ name ][ 3 ], hand[ name ][ 4 ])).</p>
+
+<p>To compare each player&rsquo;s hand to determine the winner, we need to sort the cards of each player. Since it has to be done for each player, we should stay within the same for loop and reference each list in the dictionary separately: ordered_hand[ name ].sort( reverse = True ). We need to initialize another dictionary which the key with the maximum value will have: compare = {}. The next step would be to code a mapping into the dictionary, then compare other values to it. If the value is bigger than what compare has, it will replace it.</p>
+
+<p>for name, value in ordered_hand.items():
+    if not compare:
+        compare[ name ] = values
+        continue
+    for i in range( 5 ):
+        if value[ i ] == list( compare.values() )[ 0 ][ i ]:
+            continue
+        elif value[ i ] &gt; list( compare.values() )[ 0 ][ i ]:
+          compare = { name: value }
+          break
+    break</p>
+
+<p>The final step would be to print out the winner which would be the only key in the dictionary. result = &ldquo;The winner is {}.&rdquo;.format( list( compare.keys() )[ 0 ] ). Then return result. The game is finished.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2019 Maddy&#39;s blog!
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

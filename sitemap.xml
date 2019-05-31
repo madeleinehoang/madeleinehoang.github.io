@@ -3,14 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>http://example.org/posts/pokergame/</loc>
     <lastmod>2019-05-29T06:42:00-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/posts/my-first-post/</loc>
+    <loc>http://example.org/</loc>
     <lastmod>2019-05-29T06:42:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
